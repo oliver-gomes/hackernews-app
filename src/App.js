@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getStoryIds } from "./services/hnApi";
 
-export function App() {
-  return <div className="App">Hello</div>;
+function App() {
+  const [storyIds, setStoryIds] = useState([]);
+
+  useEffect(() => {
+    setStoryIds("hello");
+  }, []);
+  return <p>{storyIds}</p>;
 }
+
+export default App;
